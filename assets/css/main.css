@@ -107,6 +107,13 @@ input, select, textarea {
 	color: #00869B;
 }
 
+/* Our services teleconf */
+
+#teleconf {
+	font-style: italic;
+	font-weight: bold;
+}
+
 /* Hamburger menu */
 
 .toggle svg {
