@@ -289,78 +289,76 @@
 		<head>
 			<style>
 			html, body {
-			width: 100%;
-			height: 100%;
-			margin: 0;
-			padding: 0;
-			/* font-family: "Helvetica", sans-serif; */
+				width: 100%;
+				height: 100%;
+				margin: 0;
+				padding: 0;
 			}
 
 			img {
-			max-width: 100%;
+				max-width: 100%;
 			}
 
 			.slider-container { 
-			height: 600px;
-			width: 100%;
-			position: relative;
-			overflow: hidden;
-			text-align: center;
-			background-color: #659cba;
-			cursor: -webkit-grab;
+				height: 600px;
+				width: 100%;
+				position: relative;
+				overflow: hidden;
+				text-align: center;
+				background-color: #659cba;
+				cursor: -webkit-grab;
 			}
 
 			.menu {
-			position: absolute;
-			left: 0;
-			z-index: 900;
-			width: 100%;
-			bottom: 0;
+				position: absolute;
+				left: 0;
+				z-index: 900;
+				width: 100%;
+				bottom: 0;
 			}
 
 			.menu label {
-			cursor: pointer;
-			display: inline-block;
-			width: 16px;
-			height: 16px;
-			background: #fff;
-			border-radius: 50px;
-			margin: 0 0.2em 1em;
+				cursor: pointer;
+				display: inline-block;
+				width: 16px;
+				height: 16px;
+				background: #fff;
+				border-radius: 50px;
+				margin: 0 0.2em 1em;
 			}
 
 			.menu label:hover,.menu label:focus {
-			background: #1c87c9;
+				background: #1c87c9;
 			}
 
 			.slide {
-			width: 100%;
-			height: 100%;
-			position: absolute;
-			top: 0;
-			left: 100%;
-			z-index: 10;
-			padding: 8em 1em 0;
-			background-size: cover;
-			background-position: 50% 50%;
-			transition: left 0s 0.75s;
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 100%;
+				z-index: 10;
+				padding: 8em 1em 0;
+				background-size: cover;
+				background-position: 50% 50%;
+				transition: left 0s 0.75s;
 			}
 
 			[id^="slide"]:checked + .slide {
-			left: 0;
-			z-index: 100;
-			transition: left 0.65s ease-out;
+				left: 0;
+				z-index: 100;
+				transition: left 0.65s ease-out;
 			}
 
 			.slide-2 {
-			background-image: url("images/clinic_6.jpg");
+				background-image: url("images/clinic_6.jpg");
 			}
 
 			.slide-1 {
-			background-image: url("images/clinic_1.jpg")
+				background-image: url("images/clinic_1.jpg")
 			}
 			.slide-3 {
-			background-image: url("images/clinic_5.jpg")
-			/* transform: rotate(90deg); */
+				background-image: url("images/clinic_5.jpg")
 			}
 			</style>
 		</head>
@@ -388,14 +386,22 @@
 				<script>
 					var map;
 					function initMap() {
-					var rosstown = {
-					lat: -37.886083, lng: 145.057090,
-					placeID: 'ChIJM9xHhCNq1moRX2QT74NykDM'
-					};
-					var map = new google.maps.Map(
-					document.getElementById('map'), {zoom: 17, center: rosstown});
-					// The marker, positioned at Uluru
-					var marker = new google.maps.Marker({position: rosstown, map: map});
+
+						var rosstown = {
+							lat: -37.886083, 
+							lng: 145.057090,
+							placeID: 'ChIJM9xHhCNq1moRX2QT74NykDM'
+						};
+
+						var map = new google.maps.Map(
+							document.getElementById('map'), {
+								zoom: 17, center: rosstown
+						});
+
+						var marker = new google.maps.Marker({
+							position: rosstown, 
+							map: map
+						});
 					}
 				</script>
 		</div>
@@ -540,13 +546,24 @@
 												<em>After Hours</em> <br>
 												(03) 9429 5677<br>
 											</div>
-											<div class="email col-3 col-6-medium">
+											<!-- <div class="email col-3 col-6-medium">
 												<a href="mailto:info@carnegiemedical.com.au"><h2>Email us</h2></a>
 												<a href="mailto:info@carnegiemedical.com.au"><i class="fas fa-envelope fa-3x"></i></a> 
 												<p> info@carnegiemedical.com.au </p>
-											</div>
+											</div> -->
 										</div>
-										</p>
+										<div class="email-form">
+											<form type="checkbox" action="#">
+												<h1>Get in touch or send your details for e-prescription</h1>
+												Name
+												<input type="text">
+												E-mail
+												<input type="text">
+												Message 
+												<textarea name="" id="" cols="30" rows="10"></textarea>
+												<button id="email-submit">Submit</button>
+											</form>
+										</div>
 									</section>
 							</div>
 						</div>
@@ -571,8 +588,7 @@
 			<script src="assets/js/scroller.js"></script>
 			<script src="assets/js/fadeitin.js"></script>
 			<script src="assets/js/buttontotop.js"></script>
-			<script src="assets/js/hamburgerbezier.js"></script>
-			<script src="assets/js/tolefthamburger.js"></script>
+			<script src="assets/js/email-submit.js"></script>
 			<script src="assets/js/googlemapapi.js"></script>
 
 					<!-- Maps API's -->
@@ -611,21 +627,5 @@
 							logged_in_greeting="Hi! How can we help you?"
 							logged_out_greeting="Hi! How can we help you?">
 					  </div>
-
-
-		<!-- Title Bar -->
-		<div id="titleBar">
-			<a href="#navPanel" class="title"></a>
-			</div>
-		</div>
-		<!-- Old Nav -->
-		<div id="titleBar">
-			<a href="#navPanel" class="toggle">
-				<?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="50px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg>
-			</a>
-				<span class="title">
-					<img src="images/h1_Logo.jpg" style="width: 240px; height: 60px; margin-right: 20px">
-				</span>
-		</div>
 	</body>
 </html>
