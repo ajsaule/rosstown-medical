@@ -22,3 +22,5 @@ nameInput.addEventListener("input", (e) => {
 emailInput.addEventListener("input", () => {
     console.log('email')
 })
+
+// replace(/^[A-Za-z'\ ]/g, '') - to get rid of any non Alpha chars in the string
