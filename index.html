@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 	<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<title>Rosstown Family Medical Centre</title>
@@ -152,7 +152,7 @@
 									</p>
 
 									<div class='altServices'>
-									<p id="teleconf"><i class="fas fa-angle-double-right gThan-2"></i> Teleconference appointments are available now, for more details please call to make a booking</p>
+									<p id="teleconf"><i class="fas fa-angle-double-right gThan-2"></i> Teleconference appointments are available now, for more details please call <u>(03) 9571 2244</u> to make a booking</p>
 									<p><i class="fas fa-angle-double-right gThan-2"></i> Face to face consultations are running as they have always been</p>
 									<p><i class="fas fa-angle-double-right gThan-2"></i> Allied health care plans (Eligibility criteria applies)</p>
 									<p><i class="fas fa-angle-double-right gThan-2"></i> Health assessments (Including commercial driving licences and employment/ pre-employment assessments)</p>
@@ -286,120 +286,27 @@
 		</section>
 
 		<!-- Image Slider -->
-		<head>
-			<style>
-			html, body {
-			width: 100%;
-			height: 100%;
-			margin: 0;
-			padding: 0;
-			/* font-family: "Helvetica", sans-serif; */
-			}
-
-			img {
-			max-width: 100%;
-			}
-
-			.slider-container { 
-			height: 600px;
-			width: 100%;
-			position: relative;
-			overflow: hidden;
-			text-align: center;
-			background-color: #659cba;
-			cursor: -webkit-grab;
-			}
-
-			.menu {
-			position: absolute;
-			left: 0;
-			z-index: 900;
-			width: 100%;
-			bottom: 0;
-			}
-
-			.menu label {
-			cursor: pointer;
-			display: inline-block;
-			width: 16px;
-			height: 16px;
-			background: #fff;
-			border-radius: 50px;
-			margin: 0 0.2em 1em;
-			}
-
-			.menu label:hover,.menu label:focus {
-			background: #1c87c9;
-			}
-
-			.slide {
-			width: 100%;
-			height: 100%;
-			position: absolute;
-			top: 0;
-			left: 100%;
-			z-index: 10;
-			padding: 8em 1em 0;
-			background-size: cover;
-			background-position: 50% 50%;
-			transition: left 0s 0.75s;
-			}
-
-			[id^="slide"]:checked + .slide {
-			left: 0;
-			z-index: 100;
-			transition: left 0.65s ease-out;
-			}
-
-			.slide-2 {
-			background-image: url("images/clinic_6.jpg");
-			}
-
-			.slide-1 {
-			background-image: url("images/clinic_1.jpg")
-			}
-			.slide-3 {
-			background-image: url("images/clinic_5.jpg")
-			/* transform: rotate(90deg); */
-			}
-			</style>
-		</head>
-		  <body>
 		    <div class="slider-container">
-		      <div class="menu">
-		        <label for="slide-dot-1"></label>
-		        <label for="slide-dot-2"></label>
-		        <label for="slide-dot-3"></label>
-		      </div>
-		      <input id="slide-dot-1" type="radio" name="slides" checked>
-		      <div class="slide slide-1"></div>
-		      <input id="slide-dot-2" type="radio" name="slides">
-		      <div class="slide slide-2"></div>
-		      <input id="slide-dot-3" type="radio" name="slides">
-		      <div class="slide slide-3"></div>
-		    </div>
-		  </body>
+		      	<div class="menu">
+					<label for="slide-dot-1"></label>
+					<label for="slide-dot-2"></label>
+					<label for="slide-dot-3"></label>
+				</div>
+				<input id="slide-dot-1" type="radio" name="slides" checked>
+				<div class="slide slide-1"></div>
+				<input id="slide-dot-2" type="radio" name="slides">
+				<div class="slide slide-2"></div>
+				<input id="slide-dot-3" type="radio" name="slides">
+				<div class="slide slide-3"></div>
+			</div>
 
 
-<!-- Google map -->
-	<section>
-		<div id="location">
-			<div id="map"></div>
-				<script>
-					var map;
-					function initMap() {
-					var rosstown = {
-					lat: -37.886083, lng: 145.057090,
-					placeID: 'ChIJM9xHhCNq1moRX2QT74NykDM'
-					};
-					var map = new google.maps.Map(
-					document.getElementById('map'), {zoom: 17, center: rosstown});
-					// The marker, positioned at Uluru
-					var marker = new google.maps.Marker({position: rosstown, map: map});
-					}
-				</script>
-		</div>
-	</section>
+		<!-- Google map -->
+			<section>
+				<div id="location">
+					<div id="map"></div>
+				</div>
+			</section>
 
 			<!-- Content -->
 				<section id="content">
@@ -435,7 +342,7 @@
 											<th>Day</th>
 											<th>Times</th>
 										</tr>
-										<tr href="index.html">
+										<tr>
 												<td><strong>Monday </strong></td>
 												<td> 9am - 6pm </td>
 										</tr>
@@ -479,7 +386,7 @@
 											<li>
 												<img src="images/testimonial_01.JPG" alt="" style="height: 80px; width: 80px"/>
 												<p>"Best best best"</p>
-												<span>Kapil<!-- Kalra -->, Gave 5 stars</span>
+												<span>Kapil, Gave 5 stars</span>
 											</li>
 											<li>
 												<img src="images/testimonial-3.png" alt="" style="height: 65px; width: 65px"/>
@@ -487,7 +394,7 @@
 														is that he hears you out regardless of how many patients are waiting outside. Our family (5 couples)
 														trust him a lot and can recommend him to anytime. His diagonostics have been spot-on and also,
 														if required, he never hesitates to refer you to the specialist."</p>
-												<span>Nitin<!-- Gupta -->, Carnegie Local Guide</span>
+												<span>Nitin, Carnegie Local Guide</span>
 											</li>
 											<li>
 												<img src="images/testimonial_02.jpg" alt="" style="height: 87px; width: 80px"/>
@@ -497,7 +404,7 @@
 													Very considerate and understanding to the situation.
 													Place is also well and cleanly presented and comfortable.
 													More so it's Bulkbilled. Thanks"</p>
-												<span>Lucy<!-- Jones -->, Reccomended the clinic</span>
+												<span>Lucy, Reccomended the clinic</span>
 											</li>
 										</ul>
 									</section>
@@ -512,8 +419,6 @@
 					
 
 								<!-- Links -->
-										<!-- <h2>Make an appointment with us now!</h2>
-										<a href="#" class="button-large">Book an appointment</a> -->
 										<div class="row">
 												<div class="col-6 col-12-medium">
 													<h2>Follow us on Facebook</h2>
@@ -540,13 +445,24 @@
 												<em>After Hours</em> <br>
 												(03) 9429 5677<br>
 											</div>
-											<div class="email col-3 col-6-medium">
+											<!-- <div class="email col-3 col-6-medium">
 												<a href="mailto:info@carnegiemedical.com.au"><h2>Email us</h2></a>
 												<a href="mailto:info@carnegiemedical.com.au"><i class="fas fa-envelope fa-3x"></i></a> 
 												<p> info@carnegiemedical.com.au </p>
-											</div>
+											</div> -->
 										</div>
-										</p>
+										<div class="email-form">
+											<form type="checkbox" action="#">
+												<h1>Get in touch</h1>
+												Name
+												<input id="input-name" type="text">
+												E-mail
+												<input id="input-email" type="text">
+												Message 
+												<textarea id="" cols="30" rows="10"></textarea>
+												<button id="email-submit" class="email-button">Submit</button>
+											</form>
+										</div>
 									</section>
 							</div>
 						</div>
@@ -570,10 +486,11 @@
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/scroller.js"></script>
 			<script src="assets/js/fadeitin.js"></script>
-			<script src="assets/js/buttontotop.js"></script>
-			<script src="assets/js/hamburgerbezier.js"></script>
-			<script src="assets/js/tolefthamburger.js"></script>
+			<!-- <script src="assets/js/buttontotop.js"></script> -->
+			<script src="assets/js/email-submit.js"></script>
 			<script src="assets/js/googlemapapi.js"></script>
+			<script src="assets/js/fbchat.js"></script>
+			<script src="assets/js/formvalidation.js"></script>
 
 					<!-- Maps API's -->
 					<!--Load the API from the specified URL
@@ -587,23 +504,6 @@
 
 					<!-- Load Facebook SDK for JavaScript -->
 				      <div id="fb-root"></div>
-				      <script>
-				        window.fbAsyncInit = function() {
-				          FB.init({
-				            xfbml            : true,
-				            version          : 'v6.0'
-				          });
-				        };
-
-				        (function(d, s, id) {
-				        var js, fjs = d.getElementsByTagName(s)[0];
-				        if (d.getElementById(id)) return;
-				        js = d.createElement(s); js.id = id;
-				        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-				        fjs.parentNode.insertBefore(js, fjs);
-				      }(document, 'script', 'facebook-jssdk'));
-					 	</script>
-
 				      <!-- Your customer chat code -->
 				      <div class="fb-customerchat"
 					        attribution=setup_tool
@@ -611,21 +511,5 @@
 							logged_in_greeting="Hi! How can we help you?"
 							logged_out_greeting="Hi! How can we help you?">
 					  </div>
-
-
-		<!-- Title Bar -->
-		<div id="titleBar">
-			<a href="#navPanel" class="title"></a>
-			</div>
-		</div>
-		<!-- Old Nav -->
-		<div id="titleBar">
-			<a href="#navPanel" class="toggle">
-				<?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="50px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg>
-			</a>
-				<span class="title">
-					<img src="images/h1_Logo.jpg" style="width: 240px; height: 60px; margin-right: 20px">
-				</span>
-		</div>
 	</body>
 </html>
