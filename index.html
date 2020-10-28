@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 	<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<title>Rosstown Family Medical Centre</title>
@@ -286,104 +286,27 @@
 		</section>
 
 		<!-- Image Slider -->
-		<head>
-			<style>
-			html, body {
-				width: 100%;
-				height: 100%;
-				margin: 0;
-				padding: 0;
-			}
-
-			img {
-				max-width: 100%;
-			}
-
-			.slider-container { 
-				height: 600px;
-				width: 100%;
-				position: relative;
-				overflow: hidden;
-				text-align: center;
-				background-color: #659cba;
-				cursor: -webkit-grab;
-			}
-
-			.menu {
-				position: absolute;
-				left: 0;
-				z-index: 900;
-				width: 100%;
-				bottom: 0;
-			}
-
-			.menu label {
-				cursor: pointer;
-				display: inline-block;
-				width: 16px;
-				height: 16px;
-				background: #fff;
-				border-radius: 50px;
-				margin: 0 0.2em 1em;
-			}
-
-			.menu label:hover,.menu label:focus {
-				background: #1c87c9;
-			}
-
-			.slide {
-				width: 100%;
-				height: 100%;
-				position: absolute;
-				top: 0;
-				left: 100%;
-				z-index: 10;
-				padding: 8em 1em 0;
-				background-size: cover;
-				background-position: 50% 50%;
-				transition: left 0s 0.75s;
-			}
-
-			[id^="slide"]:checked + .slide {
-				left: 0;
-				z-index: 100;
-				transition: left 0.65s ease-out;
-			}
-
-			.slide-2 {
-				background-image: url("images/clinic_6.jpg")
-			}
-			.slide-1 {
-				background-image: url("images/clinic_1.jpg")
-			}
-			.slide-3 {
-				background-image: url("images/clinic_5.jpg")
-			}
-			</style>
-		</head>
-		  <body>
 		    <div class="slider-container">
-		      <div class="menu">
-		        <label for="slide-dot-1"></label>
-		        <label for="slide-dot-2"></label>
-		        <label for="slide-dot-3"></label>
-		      </div>
-		      <input id="slide-dot-1" type="radio" name="slides" checked>
-		      <div class="slide slide-1"></div>
-		      <input id="slide-dot-2" type="radio" name="slides">
-		      <div class="slide slide-2"></div>
-		      <input id="slide-dot-3" type="radio" name="slides">
-		      <div class="slide slide-3"></div>
-		    </div>
-		  </body>
+		      	<div class="menu">
+					<label for="slide-dot-1"></label>
+					<label for="slide-dot-2"></label>
+					<label for="slide-dot-3"></label>
+				</div>
+				<input id="slide-dot-1" type="radio" name="slides" checked>
+				<div class="slide slide-1"></div>
+				<input id="slide-dot-2" type="radio" name="slides">
+				<div class="slide slide-2"></div>
+				<input id="slide-dot-3" type="radio" name="slides">
+				<div class="slide slide-3"></div>
+			</div>
 
 
-<!-- Google map -->
-	<section>
-		<div id="location">
-			<div id="map"></div>
-		</div>
-	</section>
+		<!-- Google map -->
+			<section>
+				<div id="location">
+					<div id="map"></div>
+				</div>
+			</section>
 
 			<!-- Content -->
 				<section id="content">
@@ -463,7 +386,7 @@
 											<li>
 												<img src="images/testimonial_01.JPG" alt="" style="height: 80px; width: 80px"/>
 												<p>"Best best best"</p>
-												<span>Kapil<!-- Kalra -->, Gave 5 stars</span>
+												<span>Kapil, Gave 5 stars</span>
 											</li>
 											<li>
 												<img src="images/testimonial-3.png" alt="" style="height: 65px; width: 65px"/>
@@ -471,7 +394,7 @@
 														is that he hears you out regardless of how many patients are waiting outside. Our family (5 couples)
 														trust him a lot and can recommend him to anytime. His diagonostics have been spot-on and also,
 														if required, he never hesitates to refer you to the specialist."</p>
-												<span>Nitin<!-- Gupta -->, Carnegie Local Guide</span>
+												<span>Nitin, Carnegie Local Guide</span>
 											</li>
 											<li>
 												<img src="images/testimonial_02.jpg" alt="" style="height: 87px; width: 80px"/>
@@ -481,7 +404,7 @@
 													Very considerate and understanding to the situation.
 													Place is also well and cleanly presented and comfortable.
 													More so it's Bulkbilled. Thanks"</p>
-												<span>Lucy<!-- Jones -->, Reccomended the clinic</span>
+												<span>Lucy, Reccomended the clinic</span>
 											</li>
 										</ul>
 									</section>
@@ -496,8 +419,6 @@
 					
 
 								<!-- Links -->
-										<!-- <h2>Make an appointment with us now!</h2>
-										<a href="#" class="button-large">Book an appointment</a> -->
 										<div class="row">
 												<div class="col-6 col-12-medium">
 													<h2>Follow us on Facebook</h2>
@@ -532,14 +453,14 @@
 										</div>
 										<div class="email-form">
 											<form type="checkbox" action="#">
-												<h1>Get in touch or send your details for e-prescription</h1>
+												<h1>Get in touch</h1>
 												Name
-												<input type="text">
+												<input id="input-name" type="text">
 												E-mail
-												<input type="text">
+												<input id="input-email" type="text">
 												Message 
-												<textarea name="" id="" cols="30" rows="10"></textarea>
-												<button id="email-submit">Submit</button>
+												<textarea id="" cols="30" rows="10"></textarea>
+												<button id="email-submit" class="email-button">Submit</button>
 											</form>
 										</div>
 									</section>
@@ -565,9 +486,11 @@
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/scroller.js"></script>
 			<script src="assets/js/fadeitin.js"></script>
-			<script src="assets/js/buttontotop.js"></script>
+			<!-- <script src="assets/js/buttontotop.js"></script> -->
 			<script src="assets/js/email-submit.js"></script>
 			<script src="assets/js/googlemapapi.js"></script>
+			<script src="assets/js/fbchat.js"></script>
+			<script src="assets/js/formvalidation.js"></script>
 
 					<!-- Maps API's -->
 					<!--Load the API from the specified URL
@@ -581,23 +504,6 @@
 
 					<!-- Load Facebook SDK for JavaScript -->
 				      <div id="fb-root"></div>
-				      <script>
-				        window.fbAsyncInit = function() {
-				          FB.init({
-				            xfbml            : true,
-				            version          : 'v6.0'
-				          });
-				        };
-
-				        (function(d, s, id) {
-				        var js, fjs = d.getElementsByTagName(s)[0];
-				        if (d.getElementById(id)) return;
-				        js = d.createElement(s); js.id = id;
-				        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-				        fjs.parentNode.insertBefore(js, fjs);
-				      }(document, 'script', 'facebook-jssdk'));
-					 	</script>
-
 				      <!-- Your customer chat code -->
 				      <div class="fb-customerchat"
 					        attribution=setup_tool

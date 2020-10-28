@@ -1,8 +1,6 @@
 let submitButton = document.getElementById("email-submit")
 
 function toggleClass() {
-    console.log(submitButton.className)
-    console.log('working')
     if (submitButton.className == "") {
         submitButton.className = "submitting"
     } else {
