@@ -1,0 +1,23 @@
+{
+  "name": "rosstown-medical",
+  "version": "1.0.0",
+  "description": "customer-forms",
+  "main": "index.js",
+  "dependencies": {
+    "node": "^15.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajsaule/rosstown-medical.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ajsaule/rosstown-medical/issues"
+  },
+  "homepage": "https://github.com/ajsaule/rosstown-medical#readme"
+}
