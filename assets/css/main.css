@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css?family=Sintony:400,300,200");
 
 html, body, div, span, applet, object,
-iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+iframe, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
 code, del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var, b,
@@ -250,7 +250,12 @@ form > * {
  	border: 1px solid #999;
 
  	/* Extra padding at top of form */
- 	margin-top: 15px;
+	margin-top: 15px;
+	 
+ }
+
+ .check-sqr {
+	position: absolute;
  }
 
  textarea {
@@ -264,6 +269,7 @@ form > * {
  input:focus, textarea:focus {
 	/* additional highlight for focused elements */
 	border-color: #B8E7F0;
+	outline: none;
 }
 
  textarea {
@@ -646,6 +652,10 @@ background-color: #555; /* Add a dark-grey background on hover */
 
 		.container {
 			width: calc(100% - 40px);
+		}
+
+		textarea {
+			width: 80%!important
 		}
 	}
 
@@ -2167,18 +2177,21 @@ background-color: #555; /* Add a dark-grey background on hover */
 
 	}
 		.bannerText {
-			text-align: bottom;
-			font-size: 0.9em;
+			text-align: bottom!important;
+			font-size: 0.9em!important;
 		    color: white;
-		    font-weight: bolder;
+		    font-weight: bolder!important;
 		    text-shadow: -0.5px -0.8px 0.5px rgba(0, 0, 0, 0.67);
 			height: 65px;
 		    position: absolute;
 		    bottom: 0;
 		    width: 100%;
-		    /*border: 1px solid green;*/
 		    background: -webkit-linear-gradient(bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.05));
 		    background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+		}
+
+		.bannerText h1 {
+			font-style: italic;
 		}
 
 		#banner .bordered-feature-image {
@@ -2758,12 +2771,46 @@ background-color: #555; /* Add a dark-grey background on hover */
 			}
 
 	}
+/* X-small */
+
+@media (max-width: 345px) {
+	.filler p {
+		font-size: smaller;
+	}
+	.whitespace {
+		display: none;
+	}
+
+	.container > h1 {
+		font-size: unset;
+	}
+
+	.button-large {
+		font-size: 13pt!important;
+	}
+
+	#titleBar .toggle:before {
+		content: '';
+		position: absolute;
+		background: url("images/iconfinder_menu-alt_134216.svg");
+		background-size: 60px;
+		height: 55px;
+		width: 35px;
+		z-index: 1;
+		opacity: 0.5;
+		margin-left: 5px;
+	}
+}
 
 /* Small */
 
 	@media (max-width: 340px) {
 		#logo-bar {
 			align-items: flex-end
+		}
+
+		#input-email, #input-name, textarea {
+			width: 100%;
 		}
 	}		
 
@@ -2778,6 +2825,14 @@ background-color: #555; /* Add a dark-grey background on hover */
 			.box-table {
 				margin: 2.5px;
 				width: 100%
+			}
+
+			form #input-name, form #input-email {
+				width: 80%
+			}
+
+			textarea {
+				height: 10em
 			}
 
 			#banner {
@@ -2837,22 +2892,10 @@ background-color: #555; /* Add a dark-grey background on hover */
 				line-height: 1.4em;
 			}
 
-		/* Banner */
+		/* From inputs */
 
-		/*#banner {
-			background-image: url(images/banner-2.jpg);
-		    background-attachment: fixed;
-		    background-size: 1000px;
-		    background-color: rgb(214, 210, 183);
-		    box-shadow: rgb(62, 72, 79) 0px 1px 5px 0px inset;
-		    display: block;
-		    height: 400px;
-		    position: absolute;
-		    background-position: center;
-		    background-repeat: no-repeat;
-		    padding: 35px 0px;*/
-		    /* Need to change the position on Y axis so that there is no creme coloring */ 
-		    /* Background has dissapeared at screen size 
+		#input-email, #input-name {
+			width: 80%;
 		}
 
 		/* Multi-use */
