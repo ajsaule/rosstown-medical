@@ -9,6 +9,7 @@ var messageContents = messageInput.value
 var emailValidRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 var formValid = false
 
+
 nameInput.addEventListener("input", () => {
     nameContents = nameInput.value
     if (nameContents.length > 0) {
@@ -46,7 +47,6 @@ messageInput.addEventListener("input", () => {
     }
 })
 
-
 submitBtn.addEventListener('click', (e) => {
     e.preventDefault()
     nameContents = nameInput.value
@@ -65,8 +65,7 @@ submitBtn.addEventListener('click', (e) => {
     }
     if (formValid == true) {
         submitBtn.className = "submitting"
-        // send of request to SendgridAPI
-        // can we talk to the Vercel FaaS here? 
+        sendMail()
     } else {
         submitBtn.className = ""
     }

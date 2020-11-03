@@ -239,31 +239,24 @@ form > * {
  }
 
  input {
- 	/* make sure text fields have same font settings. By default textarea have monospace font */
  	font: 1em sans-serif;
-
- 	/* unform text field size */
  	width: 300px;
  	box-sizing: border-box;
-
- 	/* match form field borders */
  	border: 1px solid #999;
-
- 	/* Extra padding at top of form */
-	margin-top: 15px;
-	 
+	margin-top: -2px;
+	margin-bottom: 15px;
  }
 
  .check-sqr {
 	position: absolute;
  }
 
- textarea {
+ #input-message {
  	font: 1em sans-serif;
  	width: 80%;
  	box-sizing: border-box;
  	border: 1px solid #999;
- 	margin-top: 5px;
+ 	margin-top: 0px;
 }
 
  input:focus, textarea:focus {
