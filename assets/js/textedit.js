@@ -67,6 +67,18 @@ submitBtn.addEventListener('click', (e) => {
         submitBtn.className = "submitting"
         // send of request to SendgridAPI
         // can we talk to the Vercel FaaS here? 
+        axios
+            .post('/api', {
+                nameContents,
+                emailContents,
+                messageContents
+            })
+            .then(res => {
+                console.log(res.data)
+            })
+        sendMail()
+        // send of request to SendgridAPI
+        // can we talk to the Vercel FaaS here? 
     } else {
         submitBtn.className = ""
     }
