@@ -53,7 +53,7 @@ app.post('/api', urlencodedParser, [
         sendMail()
     }
 
-    //res.json(req.body)
+    res.json(req.body)
 })
   
 // app.get('/api/item/:slug', (req, res) => {

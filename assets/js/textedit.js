@@ -76,7 +76,6 @@ submitBtn.addEventListener('click', (e) => {
             .then(res => {
                 console.log(res.data)
             })
-        sendMail()
         // send of request to SendgridAPI
         // can we talk to the Vercel FaaS here? 
     } else {
