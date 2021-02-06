@@ -24,7 +24,7 @@ app.post('/api', urlencodedParser, (req, res) => {
         from: `${emailContents}`, // Should I make it the sender email or just a default dummy email
         subject: 'This is a test email',
         // text: 'and easy to do anywhere, even with Node.js',
-        html: `Message from ${nameContents}: ${messageContents}`
+        html: `Message from ${nameContents}: <br> ${messageContents}`
     }
 
     const sendMail = () => {

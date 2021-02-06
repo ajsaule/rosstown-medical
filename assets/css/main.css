@@ -539,11 +539,11 @@ button:hover{
 }
 
 .slide-1 {
-	background-image: url("/images/clinic_6.jpg");
+	background-image: url("/images/clinic_1.jpg")
 }
 
 .slide-2 {
-	background-image: url("/images/clinic_1.jpg")
+	background-image: url("/images/clinic_6.jpg")
 }
 .slide-3 {
 	background-image: url("/images/clinic_5.jpg")
