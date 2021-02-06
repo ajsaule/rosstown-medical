@@ -18,17 +18,13 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 app.post('/api', urlencodedParser, (req, res) => {
 
     const { nameContents, emailContents, messageContents } = req.body
-    
-    console.log(nameContents)
-    console.log(emailContents)
-    console.log(messageContents)
 
     const msg = {
         to: 'andrejsaule8@gmail.com', // Change to your recipient
         from: `${emailContents}`, // Should I make it the sender email or just a default dummy email
         subject: 'This is a test email',
         // text: 'and easy to do anywhere, even with Node.js',
-        html: `<strong>This is a message from ${nameContents}: ${messageContents} </strong>`
+        html: `Message from ${nameContents}: ${messageContents}`
     }
 
     const sendMail = () => {
