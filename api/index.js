@@ -7,7 +7,7 @@ const cors = require('cors')
 const sgMail = require('@sendgrid/mail')
 const bodyParser = require('body-parser')
 const { check, validationResult } = require('express-validator')
-const urlencodedParser = bodyParser.urlencoded({ extended: false })
+const urlencodedParser = bodyParser.json()
 
 // middleware functions that get executed, between enpoints and entrypoints of server (trim empty strings, rate limit, check origins)
 // middleware also protects authentication and authorisation
@@ -15,50 +15,34 @@ app.use(cors())
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
-app.post('/api', urlencodedParser, [
-    check('nameContents', 'This field must be at least 3+ characters long')
-        .exists()
-        .isLength({ min: 3 }),
-    check('emailContents', 'Email is not valid')
-        .isEmail()
-        .normalizeEmail(),
-    check('messageContents', 'Please enter a valid message')
-        .exists()
-        .isLength({ min: 1 })
-], (req, res) => {
-        
-    const errors = validationResult(req)
+app.post('/api', urlencodedParser, (req, res) => {
+
+    const { nameContents, emailContents, messageContents } = req.body
     
-    if (!errors.isEmpty()) {
-        // return res.status(422).jsonp(errors.array())
-        // const alert = errors.array()
-    } else {
-        const { nameContents, emailContents, messageContents } = req.body
+    console.log(nameContents)
+    console.log(emailContents)
+    console.log(messageContents)
 
-        console.log(nameContents)
-        console.log(emailContents)
-        console.log(messageContents)
-
-        const msg = {
-            to: 'andrejsaule8@gmail.com', // Change to your recipient
-            from: `${emailContents}`, // Should I make it the sender email or just a default dummy email
-            subject: 'This is a test email',
-            // text: 'and easy to do anywhere, even with Node.js',
-            html: `<strong>This is a message from ${nameContents}: ${messageContents} </strong>`
-        }
-
-        const sendMail = () => {
-            sgMail
-                .send(msg)
-                .then(() => {
-                    console.log('Email sent')
-                })
-                .catch((error) => {
-                    console.error(error)
-                })
-        }
-        sendMail()
+    const msg = {
+        to: 'andrejsaule8@gmail.com', // Change to your recipient
+        from: `${emailContents}`, // Should I make it the sender email or just a default dummy email
+        subject: 'This is a test email',
+        // text: 'and easy to do anywhere, even with Node.js',
+        html: `<strong>This is a message from ${nameContents}: ${messageContents} </strong>`
     }
+
+    const sendMail = () => {
+        sgMail
+            // the below is a promise chain
+            .send(msg)
+            .then(() => {
+                console.log('Email sent')
+            })
+            .catch((error) => {
+                console.error(error)
+            })
+    }
+    sendMail()
 
     res.json(req.body)
 })
