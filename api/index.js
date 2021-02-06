@@ -1,12 +1,19 @@
 require('dotenv').config()
-const app = require('express')()
-const { check, validationResult } = require('express-validator')
-const bodyParser = require('body-parser')
-const sgMail = require('@sendgrid/mail')
-sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
+const port = 5000
+const express = require('express')
+const app = express()
+const cors = require('cors')
+const sgMail = require('@sendgrid/mail')
+const bodyParser = require('body-parser')
+const { check, validationResult } = require('express-validator')
 const urlencodedParser = bodyParser.urlencoded({ extended: false })
 
+// middleware functions that get executed, between enpoints and entrypoints of server (trim empty strings, rate limit, check origins)
+// middleware also protects authentication and authorisation
+app.use(cors())
+
+sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
 app.post('/api', urlencodedParser, [
     check('nameContents', 'This field must be at least 3+ characters long')
@@ -60,6 +67,7 @@ app.post('/api', urlencodedParser, [
 
 // })
 
+app.listen(port, () => console.info(`App listening on port ${port}`))
 
 module.exports = app 
 

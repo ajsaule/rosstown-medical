@@ -67,17 +67,35 @@ submitBtn.addEventListener('click', (e) => {
         submitBtn.className = "submitting"
         // send of request to SendgridAPI
         // can we talk to the Vercel FaaS here? 
-        axios
-            .post('/api', {
-                nameContents,
-                emailContents,
-                messageContents
-            })
-            .then(res => {
-                console.log(res.data)
-            })
+        axios({
+            url: 'http://localhost:5000/api',
+            method: 'POST',
+            data: {
+                nameContents: nameContents,
+                emailContents: emailContents,
+                messageContents: messageContents
+            }
+        })
+        .then(res => {
+            console.log(res.data)
+        })
+        .catch(function (error) {
+            if (error.response) {
+                // Request made and server responded
+                console.log(error.response.data);
+                console.log(error.response.status);
+                console.log(error.response.headers);
+            } else if (error.request) {
+                // The request was made but no response was received
+                console.log(error.request);
+            } else {
+                // Something happened in setting up the request that triggered an Error
+                console.log('Error', error.message);
+            }
+        })
         // send of request to SendgridAPI
         // can we talk to the Vercel FaaS here? 
+        // .finally({ will always execute no matter what server sends back as the status codes })
     } else {
         submitBtn.className = ""
     }
