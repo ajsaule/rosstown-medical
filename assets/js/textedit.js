@@ -65,8 +65,6 @@ submitBtn.addEventListener('click', (e) => {
     }
     if (formValid == true) {
         submitBtn.className = "submitting"
-        // send of request to SendgridAPI
-        // can we talk to the Vercel FaaS here? 
         axios({
             url: 'http://localhost:5000/api',
             method: 'POST',
