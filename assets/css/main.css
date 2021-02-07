@@ -288,7 +288,7 @@ form > * {
 
 /* Button with load icon rotating */ 
 
-button{
+button {
   margin-top: 15px;
   font-weight: bold;
   text-transform: uppercase;
@@ -308,7 +308,7 @@ button{
   line-height: 40px;
   margin-left: .5em;
 }
-button::after{
+button::after {
   font-family: Font Awesome\ 5 Free;
   display: inline-block;
   content: "\f110";
@@ -325,20 +325,20 @@ button::after{
   height: 40px;
   line-height: 40px;
 }
-button:hover{
+button:hover {
   background-color: #08c2df;
 }
 
-.submitting{
+.submitting {
   padding-right: 50px;
   background-color: #00869B!important;
 }
-.submitting::after{
+.submitting::after {
   color: #FFF;
   animation: rotate 1s infinite linear;
 }
 
-@keyframes rotate{
+@keyframes rotate {
   from{ transform: rotate(0deg); }
   to{ transform: rotate(360deg); }
 }
