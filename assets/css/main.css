@@ -140,6 +140,7 @@ input, select, textarea {
 		font-family: 'Encode Sans Semi Condensed';
 		line-height: 1.85em;
 		font-weight: 300;
+		border-radius: 5px;
 	}
 
 	ul, ol, p, dl {
@@ -263,7 +264,7 @@ form > * {
  	width: 80%;
  	box-sizing: border-box;
  	border: 1px solid #999;
- 	margin-top: 5px;
+ 	margin-top: 15px;
 }
 
  input:focus, textarea:focus {
