@@ -1,3 +1,6 @@
+var emailForm = document.querySelector(".email-form")
+var thankyouMsg = document.querySelector("#thank-you")
+
 var nameInput = document.querySelector("#input-name")
 var emailInput = document.querySelector("#input-email")
 var messageInput = document.querySelector("#input-message")
@@ -77,7 +80,7 @@ submitBtn.addEventListener('click', (e) => {
         .then(res => {
             console.log(res.data)
         })
-        .catch(function (error) {
+        .catch(error => {
             if (error.response) {
                 // Request made and server responded
                 console.log(error.response.data);
@@ -91,6 +94,10 @@ submitBtn.addEventListener('click', (e) => {
                 console.log('Error', error.message);
             }
         })
+        .finally(setTimeout (function () {
+            emailForm.style.display = 'none'
+            thankyouMsg.style.display = 'block'
+        }, 2000))
         // .finally({ will always execute no matter what server sends back as the status codes })
         // don't really need to use finally here but sometimes we will need to use it as a catchall
     } else {
