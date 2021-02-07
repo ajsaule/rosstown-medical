@@ -91,9 +91,8 @@ submitBtn.addEventListener('click', (e) => {
                 console.log('Error', error.message);
             }
         })
-        // send of request to SendgridAPI
-        // can we talk to the Vercel FaaS here? 
         // .finally({ will always execute no matter what server sends back as the status codes })
+        // don't really need to use finally here but sometimes we will need to use it as a catchall
     } else {
         submitBtn.className = ""
     }
