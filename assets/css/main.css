@@ -286,6 +286,12 @@ form > * {
 	padding-left: 90px;
 }
 
+/* Thankyou message */
+
+#thank-you {
+	padding-left: 75px;
+}
+
 /* Button with load icon rotating */ 
 
 button {

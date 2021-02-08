@@ -77,8 +77,9 @@ submitBtn.addEventListener('click', (e) => {
                 messageContents: messageContents
             }
         })
-        .then(res => {
+        .then(res => {    
             console.log(res.data)
+            submitBtn.disabled = true
         })
         .catch(error => {
             if (error.response) {

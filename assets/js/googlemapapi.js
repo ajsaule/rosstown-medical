@@ -1,4 +1,19 @@
+require('dotenv').config()
+
 var map;
+var script = document.createElement('script');
+
+script.src = `https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLE_MAP_API_KEY}&callback=initMap`;
+script.async = true;
+
+// Attach your callback function to the `window` object
+window.initMap = function() {
+  // JS API is loaded and available
+};
+
+// Append the 'script' element to 'head'
+document.head.appendChild(script);
+
 function initMap() {
 
     var rosstown = {
@@ -9,7 +24,8 @@ function initMap() {
 
     var map = new google.maps.Map(
         document.getElementById('map'), {
-            zoom: 17, center: rosstown
+            zoom: 17,
+            center: rosstown
     });
 
     var marker = new google.maps.Marker({

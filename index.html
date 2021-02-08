@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
-	<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<head><meta http-equiv="Content-Type" content="text/html"; charset="utf-8">
+		<meta charset="UTF-8">
+		<meta name="description" content="Free Web tutorials">
+		<meta name="keywords" content="HTML, CSS, JavaScript">
+		<meta name="author" content="John Doe">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Rosstown Family Medical Centre</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -34,10 +39,10 @@
 								</div>
 								<!-- Hiding Contact Banner --> 
 								<div id="hiding-contact"> <!-- Can I set col-12 class to this for it to take up all 12 flexbox?  -->
-									   <div class="filler"> <p class="whitespace"> &nbsp &nbsp &nbsp </p> <!-- is there a different way than this hacky method to push text to next line down -->
-									   		<div class="contact-1"> <p> 73 Rosstown Rd, Carnegie VIC 3163 </p></div>
-									   		<div class="contact-2"> <p> &nbsp  Open 6 Days &nbsp </p></div>
-									   		<div class="contact-3"> <p> &nbsp  Call us on (03) 9571 2244 </p></div>
+										<div class="filler"> <p class="whitespace"> &nbsp &nbsp &nbsp </p> <!-- is there a different way than this hacky method to push text to next line down -->
+											<div class="contact-1"> <p> 73 Rosstown Rd, Carnegie VIC 3163 </p></div>
+											<div class="contact-2"> <p> &nbsp  Open 6 Days &nbsp </p></div>
+											<div class="contact-3"> <p> &nbsp  Call us on (03) 9571 2244 </p></div>
 										</div>
 								</div>
 						</div>
@@ -57,7 +62,7 @@
 
 								<!-- Logo -->
 									<a class="container" href="#"></a>
-										<img src="images\h1_Logo.jpg" style="margin: 25px 0px 0px 0px" width="322" height="81" alt="Rosstown family medical clinic logo">
+										<img src="images\h1_Logo.jpg" style="margin: 25px 0px 0px 0px" width="322" height="81" alt="Rosstown family medical clinic logo carnegie">
 
 								<!-- Nav -->
 									<nav id="nav">
@@ -66,6 +71,7 @@
 											<a href="index.html#services">SERVICES</a>
 											<a href="index.html#location">LOCATION</a>							
 											<a href="index.html#times">OPENING TIMES</a>
+											<a href="index.html#footer">CONTACT US</a>
 									</nav>
 							</div>
 						</div>
@@ -320,7 +326,7 @@
 											<h2>One of Melbournes oldest family clinics</h2>
 											<h3>More about us</h3>
 										</header>
-										<a href="#" class="feature-image"><img src="images/pic05.jpg" width="220" height="138" alt="" style="max-width: 100%; height: auto; width: auto\9; border-radius: 25px;"></a>
+										<a href="#" class="feature-image"><img src="images/pic05.jpg" width="220" height="138" alt="carnegie rosstown medical clinic family" style="max-width: 100%; height: auto; width: auto\9; border-radius: 25px;"></a>
 										<p>
 											One of the oldest and longest running family practices in Melbourne.
 											Our principle doctor Dr. Andrew Patrick MBBS FRACGP, is among Carnegies most respected and experienced doctors, we have strived to provide the highest standard of medical service to the community since 1974.
@@ -384,12 +390,12 @@
 										</header>
 										<ul class="quote-list">
 											<li>
-												<img src="images/testimonial_01.JPG" alt="" style="height: 80px; width: 80px"/>
+												<img src="images/testimonial_01.JPG" alt="rosstown family testimonial clinic" style="height: 80px; width: 80px"/>
 												<p>"Best best best"</p>
 												<span>Kapil, Gave 5 stars</span>
 											</li>
 											<li>
-												<img src="images/testimonial-3.png" alt="" style="height: 65px; width: 65px"/>
+												<img src="images/testimonial-3.png" alt="rosstown family clinic five stars" style="height: 65px; width: 65px"/>
 												<p>"Dr. Andrew Patrick is a very good doctor. The good thing about him, unlike many other doctors,
 														is that he hears you out regardless of how many patients are waiting outside. Our family (5 couples)
 														trust him a lot and can recommend him to anytime. His diagonostics have been spot-on and also,
@@ -397,7 +403,7 @@
 												<span>Nitin, Carnegie Local Guide</span>
 											</li>
 											<li>
-												<img src="images/testimonial_02.jpg" alt="" style="height: 87px; width: 80px"/>
+												<img src="images/testimonial_02.jpg" alt="rosstown family clinic medical" style="height: 87px; width: 80px"/>
 												<p>"The friendly staff and a good GP who can attend to you when you needed most.
 													Feel comfortable to explain your issues and handle well situations when I ask for help.
 													A clinic that reception department, handles your requests when you want to see a doctor.
@@ -441,7 +447,7 @@
 												<p style="margin: -10px"> &nbsp </p>
 												<p style="margin: -10px"> &nbsp </p>
 												<b>Fax Number</b> <br>
-												(03) 9429 5677 <br>
+												(03) 9571 9032 <br>
 												<em>After Hours</em> <br>
 												(03) 9429 5677<br>
 											</div>
@@ -452,7 +458,7 @@
 											</div> -->
 										</div>
 										<h1 style="display: none;" id="thank-you">Thank you for your message</h1>
-										<div class="email-form">
+										<div class="email-form" id="contact">
 											<form type="checkbox" action="#">
 												<h1>Get in touch</h1>
 												Name
@@ -504,8 +510,6 @@
 					* The callback parameter executes the initMap() function
 					-->
 					<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDd6R9OBPg8Thz2KI353LzMfpsrgcM8vkI&callback=initMap"></script>
-					<!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFYYq3b1X_mGAcA9CM-UyMYZFQxPOTMno&libraries=places"></script> -->
-					<!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/place/details/json?placeid=ChIJM9xHhCNq1moRX2QT74NykDM&key=AIzaSyDFYYq3b1X_mGAcA9CM-UyMYZFQxPOTMno"></script> -->
 
 					<!-- Load Facebook SDK for JavaScript -->
 				      <div id="fb-root"></div>

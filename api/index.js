@@ -21,8 +21,8 @@ app.post('/api', urlencodedParser, (req, res) => {
 
     const msg = {
         to: 'andrejsaule8@gmail.com', // Change to your recipient info@carnegiemedical.com.au
-        from: `${emailContents}`, // Should I make it the sender email or just a default dummy email
-        subject: 'This is a test',
+        from: `${emailContents}`, //`${emailContents}`, // Should I make it the sender email or just a default dummy email
+        subject: 'Rosstown Website Form',
         // text: 'and easy to do anywhere, even with Node.js',
         html: `Name: ${nameContents} <br> Email: ${emailContents} <br> Message: ${messageContents}`
     }
