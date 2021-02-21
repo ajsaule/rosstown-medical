@@ -68,15 +68,28 @@ submitBtn.addEventListener('click', (e) => {
     }
     if (formValid == true) {
         submitBtn.className = "submitting"
-        axios({
-            url: 'http://localhost:5000/api',
-            method: 'POST',
-            data: {
-                nameContents: nameContents,
-                emailContents: emailContents,
-                messageContents: messageContents
-            }
-        })
+        axios(
+            window.location.protocol === 'http' ?
+                {
+                    url: 'http://localhost:5000/api',
+                    method: 'POST',
+                    data: {
+                        nameContents: nameContents,
+                        emailContents: emailContents,
+                        messageContents: messageContents
+                    }
+                }
+                :
+                {
+                    url: 'https://www.carnegiefamilymedical.com.au/api',
+                    method: 'POST',
+                    data: {
+                        nameContents: nameContents,
+                        emailContents: emailContents,
+                        messageContents: messageContents
+                    }
+                }
+        )
         .then(res => {    
             console.log(res.data)
             submitBtn.disabled = true
