@@ -17,6 +17,8 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
 app.post('/api', urlencodedParser, (req, res) => {
 
+    console.log('working')
+
     const { nameContents, emailContents, messageContents } = req.body
 
     const msg = {
