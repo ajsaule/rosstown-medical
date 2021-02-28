@@ -52,8 +52,7 @@ module.exports = async (req, res) => {
                 console.error(error)
             })
     }
-    
-    console.log('working')
+
     console.log('request', req.body)
 
     try {
