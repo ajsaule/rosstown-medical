@@ -1,23 +1,35 @@
 require('dotenv').config()
 
-const port = 5000
+// const port = 5000
 const express = require('express')
 const app = express()
 const cors = require('cors')
 const sgMail = require('@sendgrid/mail')
-const bodyParser = require('body-parser')
-const { check, validationResult } = require('express-validator')
-const urlencodedParser = bodyParser.json()
+// const bodyParser = require('body-parser')
+// const { check, validationResult } = require('express-validator')
+// const urlencodedParser = bodyParser.json()
+
+sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
 // middleware functions that get executed, between enpoints and entrypoints of server (trim empty strings, rate limit, check origins)
 // middleware also protects authentication and authorisation
 app.use(cors())
 
-sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
-app.post('/api', urlencodedParser, (req, res) => {
+// app.post('/api', urlencodedParser, (req, res) => {
 
-    console.log('working')
+    // sendMail()
+
+    // res.json(req.body)
+// })
+  
+// app.get('/api/item/:slug', (req, res) => {
+
+// })
+
+// app.listen(port, () => console.info(`App listening on port ${port}`))
+
+module.exports = async (req, res) => {
 
     const { nameContents, emailContents, messageContents } = req.body
 
@@ -28,9 +40,9 @@ app.post('/api', urlencodedParser, (req, res) => {
         // text: 'and easy to do anywhere, even with Node.js',
         html: `Name: ${nameContents} <br> Email: ${emailContents} <br> Message: ${messageContents}`
     }
-
-    const sendMail = () => {
-        sgMail
+    
+    async function sendMail() {
+        await sgMail
             // the below is a promise chain
             .send(msg)
             .then(() => {
@@ -40,19 +52,16 @@ app.post('/api', urlencodedParser, (req, res) => {
                 console.error(error)
             })
     }
-    sendMail()
+    
+    console.log('working')
+    console.log('request', req.body)
 
-    res.json(req.body)
-})
-  
-// app.get('/api/item/:slug', (req, res) => {
-
-// })
-
-app.listen(port, () => console.info(`App listening on port ${port}`))
-
-module.exports = app 
-
+    try {
+        await sendMail()
+    } catch (err) {
+        res.status(500)
+    }
+} 
 
 // Continue on with this video 
 // https://www.youtube.com/watch?v=z8m_Vy_9FIs&t=160s

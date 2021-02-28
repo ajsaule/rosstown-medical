@@ -69,9 +69,9 @@ submitBtn.addEventListener('click', (e) => {
     if (formValid == true) {
         submitBtn.className = "submitting"
         axios(
-            window.location.protocol === 'http' ?
+            window.location.protocol === 'http:' ?
                 {
-                    url: 'http://localhost:5000/api',
+                    url: 'http://localhost:3000/api/sendMail',
                     method: 'POST',
                     data: {
                         nameContents: nameContents,
@@ -81,7 +81,7 @@ submitBtn.addEventListener('click', (e) => {
                 }
                 :
                 {
-                    url: 'https://www.carnegiefamilymedical.com.au/api',
+                    url: 'https://www.carnegiefamilymedical.com.au/api/sendMail',
                     method: 'POST',
                     data: {
                         nameContents: nameContents,
