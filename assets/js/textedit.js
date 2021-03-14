@@ -67,7 +67,7 @@ submitBtn.addEventListener('click', (e) => {
         formValid = false
     }
     if (formValid == true) {
-        submitBtn.className = "submitting"
+        submitBtn.className = "submitting" 
         axios(
             window.location.protocol === 'http:' ?
                 {
