@@ -62,7 +62,3 @@ module.exports = async (req, res) => {
     }
 } 
 
-// Continue on with this video 
-// https://www.youtube.com/watch?v=z8m_Vy_9FIs&t=160s
-// look at existing Happy path project to figure out how to get data back from a server and render it to HTML on the page
-// 
