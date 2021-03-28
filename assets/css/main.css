@@ -633,7 +633,7 @@ background-color: #555; /* Add a dark-grey background on hover */
 
 }
 
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 1080px) {
 
 	.container {
 		width: calc(100% - 50px);
@@ -2567,7 +2567,7 @@ background-color: #555; /* Add a dark-grey background on hover */
 		display: none;
 	}
 
-	@media screen and (max-width: 980px) {
+	@media screen and (max-width: 1080px) {
 
 		/* Cvoid Section */ 
 
