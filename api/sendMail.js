@@ -1,13 +1,8 @@
 require('dotenv').config()
-
-// const port = 5000
 const express = require('express')
 const app = express()
 const cors = require('cors')
 const sgMail = require('@sendgrid/mail')
-// const bodyParser = require('body-parser')
-// const { check, validationResult } = require('express-validator')
-// const urlencodedParser = bodyParser.json()
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
@@ -15,19 +10,6 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 // middleware also protects authentication and authorisation
 app.use(cors())
 
-
-// app.post('/api', urlencodedParser, (req, res) => {
-
-    // sendMail()
-
-    // res.json(req.body)
-// })
-  
-// app.get('/api/item/:slug', (req, res) => {
-
-// })
-
-// app.listen(port, () => console.info(`App listening on port ${port}`))
 
 module.exports = async (req, res) => {
 
@@ -54,6 +36,7 @@ module.exports = async (req, res) => {
     }
 
     console.log('request', req.body)
+    console.log('response', res.body)
 
     try {
         await sendMail()

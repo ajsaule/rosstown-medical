@@ -2340,6 +2340,7 @@ background-color: #555; /* Add a dark-grey background on hover */
 			padding: 40px 30px 45px 30px;
 			box-shadow: 2px 2px 2px 1px rgba(128, 128, 128, 0.1);
 			margin: 0 0 25px 0;
+			height: 100%
 		}
 
 		#content h2 {
