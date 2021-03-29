@@ -1,15 +1,6 @@
-require('dotenv').config()
-const express = require('express')
-const app = express()
-const cors = require('cors')
 const sgMail = require('@sendgrid/mail')
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY)
-
-// middleware functions that get executed, between enpoints and entrypoints of server (trim empty strings, rate limit, check origins)
-// middleware also protects authentication and authorisation
-app.use(cors())
-
 
 module.exports = async (req, res) => {
 
@@ -36,7 +27,6 @@ module.exports = async (req, res) => {
     }
 
     console.log('request', req.body)
-    console.log('response', res.body)
 
     try {
         await sendMail()
