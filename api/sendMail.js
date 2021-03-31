@@ -23,9 +23,9 @@ const handler = (req, res) => {
     res.end(d.toString())
 }
   
-module.exports = async (req, res) => {
+module.exports = allowCors(handler)
 
-    allowCors(handler)
+module.exports = async (req, res) => {
 
     const { nameContents, emailContents, messageContents } = req.body
 
