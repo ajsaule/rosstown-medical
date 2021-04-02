@@ -81,7 +81,7 @@ submitBtn.addEventListener('click', (e) => {
                 }
                 :
                 {
-                    url: 'https://www.carnegiefamilymedical.com.au/api/sendMail',
+                    url: 'https://www.carnegiemedical.com.au/api/sendMail',
                     method: 'POST',
                     data: {
                         nameContents: nameContents,
