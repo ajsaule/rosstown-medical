@@ -30,10 +30,9 @@ module.exports = async (req, res) => {
     const { nameContents, emailContents, messageContents } = req.body
 
     const msg = {
-        to: 'andrejsaule8@gmail.com', // Change to your recipient info@carnegiemedical.com.au
-        from: `${emailContents}`, //`${emailContents}`, // Should I make it the sender email or just a default dummy email
+        to: 'andrejsaule8@gmail.com', 
+        from: `${emailContents}`, 
         subject: 'Rosstown Website Form',
-        // text: 'and easy to do anywhere, even with Node.js',
         html: `Name: ${nameContents} <br> Email: ${emailContents} <br> Message: ${messageContents}`
     }
     
