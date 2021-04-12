@@ -2853,7 +2853,7 @@ background-color: #555; /* Add a dark-grey background on hover */
 			display: block;
 			position: relative;
 			background-size: 1400px;
-			background-position-y: unset;
+			background-position-y: 60px;
 			background-repeat: no-repeat;
 			background-position-x: -291px;
 		}
