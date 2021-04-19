@@ -71,7 +71,7 @@ submitBtn.addEventListener('click', (e) => {
         axios(
             window.location.protocol === 'http:' ?
                 {
-                    url: 'http://localhost:3002/api/sendMail',
+                    url: 'http://localhost:3000/api/sendMail',
                     method: 'POST',
                     data: {
                         nameContents: nameContents,
