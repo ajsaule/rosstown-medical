@@ -294,7 +294,7 @@ form > * {
 
 /* Button with load icon rotating */ 
 
-#email-submit {
+button {
   margin-top: 15px;
   font-weight: bold;
   text-transform: uppercase;
@@ -314,7 +314,7 @@ form > * {
   line-height: 40px;
   margin-left: .5em;
 }
-#email-submit::after {
+button::after {
   font-family: Font Awesome\ 5 Free;
   display: inline-block;
   content: "\f110";
@@ -331,7 +331,7 @@ form > * {
   height: 40px;
   line-height: 40px;
 }
-#email-submit:hover {
+button:hover {
   background-color: #08c2df;
 }
 

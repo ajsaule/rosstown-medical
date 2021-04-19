@@ -51,7 +51,12 @@ messageInput.addEventListener("input", () => {
 
 
 submitBtn.addEventListener('click', (e) => {
-    e.preventDefault()
+    if (e.preventDefault) {
+        e.preventDefault()
+    }
+    if (e.stopPropagation) {
+        e.stopPropagation()
+    }
     nameContents = nameInput.value
     messageContents = messageInput.value 
     if (!emailContents.match(emailValidRegex)) {

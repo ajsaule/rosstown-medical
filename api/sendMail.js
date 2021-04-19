@@ -51,7 +51,9 @@ module.exports = async (req, res) => {
 
     try {
         await sendMail()
+        res.status(204).end()
     } catch (err) {
+        console.log('err123', err)
         res.status(500)
     }
 } 
