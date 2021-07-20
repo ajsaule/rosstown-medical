@@ -87,6 +87,13 @@ input, select, textarea {
 	justify-content: center;
 	flex-direction: row;
 }
+#covid div {
+	font-weight: bold;
+	text-align: center;
+	font-size: 25px;
+	margin-bottom: 10px;
+	background-color: rgb(203, 241, 134)
+}
 #covid center img {
 	height: 110px;
 	margin: 0 50px 0 50px;
