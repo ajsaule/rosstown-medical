@@ -109,7 +109,7 @@ submitBtn.addEventListener('click', e => {
       url:
         window.location.protocol === 'http:'
           ? 'http://localhost:3000/api/sendMail'
-          : 'https://www.athanspainting.com.au/api/sendMail',
+          : 'https://www.carnegiemedical.com.au/api/sendMail',
       method: 'POST',
       data: {
         nameContents,
