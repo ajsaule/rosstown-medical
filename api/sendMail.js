@@ -14,7 +14,7 @@ const handler = async (req, res) => {
             Message: ${messageContents} <br>
             `,
   }
-  if (req.headers.referer === 'https://www.carnegiemedical.com.au/') {
+  if (req.headers.referer === 'http://localhost:3000/') {
     try {
       await sgMail.send(msg)
       res.status(204).end()
