@@ -14,16 +14,16 @@ const handler = async (req, res) => {
             Message: ${messageContents} <br>
             `,
   }
-  // if (req.headers.referer === 'https://www.carnegiemedical.com.au/') {
-  try {
-    await sgMail.send(msg)
-    res.status(204).end()
-  } catch (err) {
-    console.log('err123', err)
-    res.status(500)
+  if (req.headers.referer === 'https://www.carnegiemedical.com.au/') {
+    try {
+      await sgMail.send(msg)
+      res.status(204).end()
+    } catch (err) {
+      console.log('err123', err)
+      res.status(500)
+    }
   }
 }
-// }
 
 const allowCors = fn => async (req, res) => {
   res.setHeader('Access-Control-Allow-Credentials', true)
