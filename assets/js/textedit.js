@@ -103,13 +103,9 @@ submitBtn.addEventListener('click', e => {
   if (formValid == true) {
     // submitBtn.className = "submitting"
     // formSpinner.style.display = 'block'
-    console.log('bro? the form is working but uhh.')
     submitBtn.disabled = true
     axios({
-      url:
-        window.location.protocol === 'http:'
-          ? 'http://localhost:3000/api/sendMail'
-          : 'https://www.carnegiemedical.com.au/api/sendMail',
+      url: 'https://www.carnegiemedical.com.au/api/sendMail',
       method: 'POST',
       data: {
         nameContents,
