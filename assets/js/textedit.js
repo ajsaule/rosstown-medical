@@ -105,7 +105,10 @@ submitBtn.addEventListener('click', e => {
     // formSpinner.style.display = 'block'
     submitBtn.disabled = true
     axios({
-      url: 'https://www.carnegiemedical.com.au/api/sendMail',
+      url:
+        window.location.protocol === 'http:'
+          ? 'http://localhost:3000/api/sendMail'
+          : 'https://www.carnegiemedical.com.au/api/sendMail',
       method: 'POST',
       data: {
         nameContents,
