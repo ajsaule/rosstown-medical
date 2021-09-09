@@ -5,7 +5,7 @@ const handler = async (req, res) => {
   const {nameContents, emailContents, messageContents} = req.body
 
   const msg = {
-    to: 'caseojkl@gmail.com',
+    to: 'andrejsaule8@gmail.com',
     from: 'andrejsaule8@gmail.com',
     subject: 'Rosstown Medical Website Form',
     html: `

@@ -1,6 +1,6 @@
 var emailForm = document.querySelector('.emailForm')
 var formSpinner = document.querySelector('.spinner')
-var thankyouMsg = document.querySelector('#thank-you')
+var thankyouMsg = document.querySelector('#thankYou')
 var requiredMsg = document.querySelector('#requiredMsg')
 var submitBtn = document.querySelector('#submitBtn')
 
