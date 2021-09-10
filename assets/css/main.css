@@ -649,14 +649,14 @@ a:hover {
 }
 
 .slide-1 {
-  background-image: url('/images/clinic_1.jpg');
+  background-image: url('/images/clinic_1.webp');
 }
 
 .slide-2 {
-  background-image: url('/images/clinic_6.jpg');
+  background-image: url('/images/clinic_6.webp');
 }
 .slide-3 {
-  background-image: url('/images/clinic_5.jpg');
+  background-image: url('/images/clinic_5.webp');
 }
 
 /* Table box styling */
@@ -2924,7 +2924,7 @@ a:hover {
 
   #banner {
     width: 100%;
-    background-image: url(images/banner-2.jpg);
+    background-image: url(images/banner-2.webp);
     background-attachment: fixed;
     background-color: rgb(214, 210, 183);
     box-shadow: rgb(62, 72, 79) 0px 1px 5px 0px inset;
@@ -3124,4 +3124,9 @@ a:hover {
 
 .button {
   margin-left: 6rem;
+}
+
+.p-hide {
+  text-indent: -10000px;
+  position: absolute;
 }
