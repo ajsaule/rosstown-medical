@@ -423,8 +423,6 @@ button {
 button::after {
   font-family: Font awesome\5 Free;
   display: inline-block;
-  content: '\f110';
-  font-weight: 900;
   font-size: 18px;
   position: absolute;
   margin: -0.5px auto 0 auto;
@@ -447,6 +445,8 @@ button:hover {
 }
 .submitting::after {
   color: #fff;
+  background-image: url(https://findicons.com/files/icons/2771/batch/64/spinner_2.png);
+  z-index: 50;
   animation: rotate 1s infinite linear;
 }
 
