@@ -1,6 +1,6 @@
 var emailForm = document.querySelector('.emailForm')
 var formSpinner = document.querySelector('.spinner')
-var thankyouMsg = document.querySelector('#thank-you')
+var thankyouMsg = document.querySelector('#thankYou')
 var requiredMsg = document.querySelector('#requiredMsg')
 var submitBtn = document.querySelector('#submitBtn')
 
@@ -133,12 +133,6 @@ submitBtn.addEventListener('click', e => {
           console.log('Error', error.message)
         }
       })
-      .finally(
-        setTimeout(function () {
-          emailForm.style.display = 'none'
-          thankyouMsg.style.display = 'block'
-        }, 2000),
-      )
     // .finally({ will always execute no matter what server sends back as the status codes })
     // don't really need to use finally here but sometimes we will need to use it as a catchall
   } else {
