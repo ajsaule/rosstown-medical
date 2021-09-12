@@ -88,21 +88,17 @@ submitBtn.addEventListener('click', e => {
   nameContents = nameInput.value
   messageContents = messageInput.value
 
-  if (!emailContents.match(emailValidRegex)) {
+  if (
+    !emailContents.match(emailValidRegex) ||
+    !messageContents ||
+    !nameContents
+  ) {
     emailInput.style.borderColor = 'red'
     formValid = false
   }
-  if (!messageContents) {
-    messageInput.style.borderColor = 'red'
-    formValid = false
-  }
-  if (!nameContents) {
-    nameInput.style.borderColor = 'red'
-    formValid = false
-  }
   if (formValid == true) {
-    // submitBtn.className = "submitting"
-    // formSpinner.style.display = 'block'
+    submitBtn.className = 'submitting'
+    formSpinner.style.display = 'block'
     submitBtn.disabled = true
     axios({
       url:
