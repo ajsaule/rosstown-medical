@@ -1,8 +1,8 @@
 var emailForm = document.querySelector('.emailForm')
-var formSpinner = document.querySelector('.spinner')
 var thankyouMsg = document.querySelector('#thankYou')
 var requiredMsg = document.querySelector('#requiredMsg')
 var submitBtn = document.querySelector('#submitBtn')
+var spinner = document.querySelector('#spinner')
 
 var nameInput = document.querySelector('#nameInput')
 var emailInput = document.querySelector('#emailInput')
@@ -88,18 +88,30 @@ submitBtn.addEventListener('click', e => {
   nameContents = nameInput.value
   messageContents = messageInput.value
 
-  if (
-    !emailContents.match(emailValidRegex) ||
-    !messageContents ||
-    !nameContents
-  ) {
+  if (!emailContents.match(emailValidRegex)) {
     emailInput.style.borderColor = 'red'
+    formValid = false
+  }
+  if (!messageContents) {
+    messageInput.style.borderColor = 'red'
+    formValid = false
+  }
+  if (!nameContents) {
+    nameInput.style.borderColor = 'red'
     formValid = false
   }
   if (formValid == true) {
     submitBtn.className = 'submitting'
-    formSpinner.style.display = 'block'
     submitBtn.disabled = true
+    spinner.style.display = 'block'
+    spinner.style.zIndex = 50
+    spinner.className = 'submittingSpinner'
+
+    setTimeout(() => {
+      emailForm.style.display = 'none'
+      thankyouMsg.style.display = 'block'
+    }, 2000)
+
     axios({
       url:
         window.location.protocol === 'http:'

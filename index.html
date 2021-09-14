@@ -347,7 +347,7 @@
 									<section>
 										<header>
 											<h2 id="times">Operating Hours</h2>
-											<h3>Hover over times with your cursor</h3>
+											<!-- <h3>Click on a time to book</h3> -->
 										</header>
 
 									<table class="box-table">
@@ -355,14 +355,14 @@
 											<th>Day</th>
 											<th>Times</th>
 										</tr>
-										<tr>
+										<a href="tel:0395712244"><tr>
 												<td><strong>Monday </strong></td>
 												<td> 9am - 6pm </td>
-										</tr>
-										<tr>
+										</tr></a>
+										<a href="tel:0395712244"></a><tr>
 												<td><strong>Tuesday </strong></td>
 												<td> 9am - 6pm </td>
-										</tr>
+										</tr></a>
 										<tr>
 												<td><strong>Wednesday </strong></td>
 												<td> 9am - 6pm </td>
@@ -427,6 +427,7 @@
 					</div>
 				</section>
 
+
 				<section id="footer">
 					<div class="container">
 					
@@ -446,7 +447,7 @@
 												<p>	<b>Address</b> <br>
 													73 Rosstown Rd, Carnegie VIC 3163 <br>
 													<b>Phone Number</b> <br>
-													(03) 9571 2244 <br>
+													<a href="tel:(03) 9571 2244">(03) 9571 2244</a><br>
 													</p>
 											</div>
 											<div class="col-3 col-6-medium">
@@ -456,18 +457,24 @@
 												<b>Fax Number</b> <br>
 												(03) 9571 9032 <br>
 												<em>After Hours</em> <br>
-												(03) 9429 5677<br>
+												<a href="tel:(03) 9429 5677">(03) 9429 5677</a><br>
 											</div>
 											<div class="email col-3 col-6-medium">
-												<a href="mailto:info@carnegiemedical.com.au"><h2>Email us</h2><p class="p-hide">Click to Email us</p></a>
-												<a href="mailto:info@carnegiemedical.com.au"><i class="fas fa-envelope fa-3x"></i><p class="p-hide">Tap to send an Email to us</p></a> 
+												<h2>Email</h2>
+												<!-- <a href="mailto:info@carnegiemedical.com.au"><i class="fas fa-envelope fa-3x"></i><p class="p-hide">Tap to send an Email to us</p></a>  -->
 												<p> info@carnegiemedical.com.au </p>
 											</div>
 										</div>
-										<h1 style="display: none;" id="thank-you">Thank you for your message</h1>
+										<h1 id='thankYou' class="hideThankyou">
+											Thanks for your message. </br>
+											We will get in touch </br>
+											with you soon
+										</h1>
 									</section>
-									<!-- <section>
+									<section>
 										<form class="emailForm" method="post">
+										<h1>Contact us</h1> 
+										<p>* required fields</p>
 											<div class="fields">
 												<div class="field half">
 													<label for="nameInput">Name *</label>
@@ -479,18 +486,16 @@
 												</div>
 												
 												<div class="field">
-													<label for="messageInput">Job Details *</label>
+													<label for="messageInput">Message *</label>
 													<textarea name="message" id="messageInput" rows="5"></textarea>
 												</div>
-												<button type="button" id="submitBtn" class="button submit" value="Submit">Submit</button>
+												<button type="button" id="submitBtn" class="button submit" value="Submit">
+													<span class="staticText">Submit</span>
+													<i class="fas fa-spinner" id="spinner"></i>
+												</button>
 											</div>
-										
-										<h1 id='thank-you' style='display: none'>
-											Thanks for your message. </br>
-											We will get in touch </br>
-											with you soon
-										</h1>
-									</section> -->
+											</form>
+									</section>
 							</div>
 						</div>
 					</div>
@@ -508,9 +513,10 @@
 		</div>
 		<!-- Old Nav -->
 		<div id="titleBar">
-			<a href="#navPanel" class="toggle"></a>
+			<!-- hiding hamnburger for now -->
+			<!-- <a href="#navPanel" class="toggle"></a> -->
 				<span class="title">
-					<img src="images/h1_Logo.jpg" style="width: 240px; height: 60px; margin-right: 20px">
+					<img src="images/h1_Logo.jpg" style="width: 240px; height: 60px; margin-right: 20px" alt="Carnegie doctor rosstown medical clinic main logo covid">
 				</span>
 		</div>
 
