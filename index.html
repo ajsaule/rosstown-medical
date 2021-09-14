@@ -460,12 +460,16 @@
 												<a href="tel:(03) 9429 5677">(03) 9429 5677</a><br>
 											</div>
 											<div class="email col-3 col-6-medium">
-												<a href="mailto:info@carnegiemedical.com.au"><h2>Email us</h2><p class="p-hide">Click to Email us</p></a>
-												<a href="mailto:info@carnegiemedical.com.au"><i class="fas fa-envelope fa-3x"></i><p class="p-hide">Tap to send an Email to us</p></a> 
+												<h2>Email</h2>
+												<!-- <a href="mailto:info@carnegiemedical.com.au"><i class="fas fa-envelope fa-3x"></i><p class="p-hide">Tap to send an Email to us</p></a>  -->
 												<p> info@carnegiemedical.com.au </p>
 											</div>
 										</div>
-										<h1 style="display: none;" id="thank-you">Thank you for your message</h1>
+										<h1 id='thankYou' class="hideThankyou">
+											Thanks for your message. </br>
+											We will get in touch </br>
+											with you soon
+										</h1>
 									</section>
 									<section>
 										<form class="emailForm" method="post">
@@ -485,14 +489,12 @@
 													<label for="messageInput">Message *</label>
 													<textarea name="message" id="messageInput" rows="5"></textarea>
 												</div>
-												<button type="button" id="submitBtn" class="button submit" value="Submit"><span class="staticText">Submit</span> <span class="submitText"></span></button>
+												<button type="button" id="submitBtn" class="button submit" value="Submit">
+													<span class="staticText">Submit</span>
+													<i class="fas fa-spinner" id="spinner"></i>
+												</button>
 											</div>
-										
-										<h1 id='thankYou' style='display: none'>
-											Thanks for your message. </br>
-											We will get in touch </br>
-											with you soon
-										</h1>
+											</form>
 									</section>
 							</div>
 						</div>
@@ -514,7 +516,7 @@
 			<!-- hiding hamnburger for now -->
 			<!-- <a href="#navPanel" class="toggle"></a> -->
 				<span class="title">
-					<img src="images/h1_Logo.jpg" style="width: 240px; height: 60px; margin-right: 20px">
+					<img src="images/h1_Logo.jpg" style="width: 240px; height: 60px; margin-right: 20px" alt="Carnegie doctor rosstown medical clinic main logo covid">
 				</span>
 		</div>
 

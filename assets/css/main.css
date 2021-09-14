@@ -382,7 +382,12 @@ textarea {
 
 /* Thankyou message */
 
+.hideThankyou {
+  display: none;
+}
+
 #thankYou {
+  font-size: 1.5em;
   padding-left: 75px;
   animation: 2s slide-right;
 }
@@ -403,6 +408,7 @@ textarea {
 /* Form button bottom page */
 
 button {
+  z-index: 1;
   margin-top: 15px;
   font-weight: bold;
   text-transform: uppercase;
@@ -423,33 +429,20 @@ button {
   margin-left: 0.5em;
 }
 
-button::after {
-  font-family: Font awesome\5 Free;
-  display: inline-block;
-  content: url(../../images/spinner-solid.svg);
-  font-weight: 900;
-  font-size: 18px;
-  position: absolute;
-  margin: -0.5px auto 0 auto;
-  right: 15px;
-  top: 0;
-  bottom: 0;
-  color: transparent;
-  transition: 0.2s;
-  transform-origin: center;
-  height: 40px;
-  line-height: 40px;
-}
 button:hover {
   background-color: #08c2df;
 }
 
 .submitting {
-  padding-right: 50px;
+  /* z-index: 1; */
+  /* padding-right: 50px; */
   background-color: #00869b !important;
 }
-.submitting::after {
+
+.submittingSpinner {
   color: #fff;
+  z-index: 50;
+  display: block;
   animation: rotate 1s infinite linear;
 }
 
@@ -462,7 +455,7 @@ button:hover {
   }
 }
 
-.submitText {
+#spinner {
   display: none;
 }
 

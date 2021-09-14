@@ -1,10 +1,8 @@
 var emailForm = document.querySelector('.emailForm')
-var formSpinner = document.querySelector('.spinner')
 var thankyouMsg = document.querySelector('#thankYou')
 var requiredMsg = document.querySelector('#requiredMsg')
 var submitBtn = document.querySelector('#submitBtn')
-var submitText = document.querySelector('.submitText')
-var staticText = document.querySelector('.staticText')
+var spinner = document.querySelector('#spinner')
 
 var nameInput = document.querySelector('#nameInput')
 var emailInput = document.querySelector('#emailInput')
@@ -104,10 +102,10 @@ submitBtn.addEventListener('click', e => {
   }
   if (formValid == true) {
     submitBtn.className = 'submitting'
-    submitText.style.display = 'block'
-    // staticText.style.display = 'none'
-    // formSpinner.style.display = 'block'
     submitBtn.disabled = true
+    spinner.style.display = 'block'
+    spinner.style.zIndex = 50
+    spinner.className = 'submittingSpinner'
 
     setTimeout(() => {
       emailForm.style.display = 'none'
