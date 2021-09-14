@@ -3,6 +3,8 @@ var formSpinner = document.querySelector('.spinner')
 var thankyouMsg = document.querySelector('#thankYou')
 var requiredMsg = document.querySelector('#requiredMsg')
 var submitBtn = document.querySelector('#submitBtn')
+var submitText = document.querySelector('.submitText')
+var staticText = document.querySelector('.staticText')
 
 var nameInput = document.querySelector('#nameInput')
 var emailInput = document.querySelector('#emailInput')
@@ -88,18 +90,30 @@ submitBtn.addEventListener('click', e => {
   nameContents = nameInput.value
   messageContents = messageInput.value
 
-  if (
-    !emailContents.match(emailValidRegex) ||
-    !messageContents ||
-    !nameContents
-  ) {
+  if (!emailContents.match(emailValidRegex)) {
     emailInput.style.borderColor = 'red'
+    formValid = false
+  }
+  if (!messageContents) {
+    messageInput.style.borderColor = 'red'
+    formValid = false
+  }
+  if (!nameContents) {
+    nameInput.style.borderColor = 'red'
     formValid = false
   }
   if (formValid == true) {
     submitBtn.className = 'submitting'
-    formSpinner.style.display = 'block'
+    submitText.style.display = 'block'
+    // staticText.style.display = 'none'
+    // formSpinner.style.display = 'block'
     submitBtn.disabled = true
+
+    setTimeout(() => {
+      emailForm.style.display = 'none'
+      thankyouMsg.style.display = 'block'
+    }, 2000)
+
     axios({
       url:
         window.location.protocol === 'http:'
