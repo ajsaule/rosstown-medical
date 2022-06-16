@@ -200,6 +200,21 @@ textarea {
   font-weight: bold;
 }
 
+/* Fee table */
+
+.fee-table {
+  width: 100%;
+}
+
+.fee-table td {
+  border: 1px solid black;
+  padding-left: 15px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
 /* Hamburger menu */
 
 .toggle svg {
@@ -497,6 +512,17 @@ button:hover {
   font-style: normal;
   text-align: left;
   display: inline-block;
+}
+
+.contact-text p {
+  margin-top: 7px;
+  margin-bottom: 0px;
+}
+
+@media (min-width: 768px) {
+  .facebook-icon {
+    margin-top: 2px;
+  }
 }
 
 /* Hiding section */
@@ -2187,11 +2213,15 @@ a:hover {
 
 /* Header */
 
+@media (min-width: 1081px) {
+  #header {
+    margin-top: 21px;
+  }
+}
+
 #header {
   position: relative;
-  background: #fcfcfc url('images/bg_test_02.jpg');
-  /* border-bottom: solid 1px #272d30; */
-  /* box-shadow: inset 0px -1px 0px 0px #51575a; */
+  background-color: #fcfcfc;
   text-shadow: -0.5px -0.5px 0.5px rgba(0, 0, 0, 0.75);
   font-family: 'Sintony', sans-serif;
   color: #393239;
@@ -2857,7 +2887,7 @@ a:hover {
 }
 /* X-small */
 
-@media (max-width: 345px) {
+@media (max-width: 340px) {
   .filler p {
     font-size: smaller;
   }
@@ -3066,7 +3096,10 @@ a:hover {
     color: #546b76;
     padding: 0 20px;
     box-sizing: border-box;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+      7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
+    background: linear-gradient(0deg, #b8e7f0 0%, #aedef5 100%);
     position: relative;
     transition: 0.2s;
     display: inline-block;
@@ -3089,6 +3122,7 @@ a:hover {
     color: #546b76;
     padding: 0 20px;
     box-sizing: border-box;
+    background: linear-gradient(0deg, #a5ecfa 0%, #83b4cb 100%);
     border-radius: 4px;
     position: relative;
     transition: 0.2s;
@@ -3108,12 +3142,13 @@ a:hover {
     background-color: #518791;
     border: none;
     outline: none;
-    color: #ffff;
+    color: gray;
     padding: 0 20px;
     box-sizing: border-box;
     border-radius: 4px;
+    background: linear-gradient(0deg, #cff7ff 0%, #c3ecff 100%);
     position: relative;
-    transition: 0.2s;
+    transition: 1s background;
     display: inline-block;
     letter-spacing: 1px;
     height: 40px;

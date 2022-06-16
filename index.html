@@ -5,7 +5,7 @@
 		  <meta charset="UTF-8">
 		  <link rel="image_src" href="./images/h1_Logo.jpg" />
 		  <meta property="og:image" content="./images/h1_Logo.jpg" />
-		  <meta name="description" content="Covid vaccines now available, visit our website to learn more about Rosstown Family Medical Centre. Low fees and highly experienced doctors. Open Monday through to Saturday.">
+		  <meta name="description" content="Low fees and highly experienced doctors. Covid vaccines now available, visit our website to learn more about Rosstown Family Medical Centre. Open Monday through to Saturday.">
 		  <meta name="keywords" content="Doctor, Medical, Clinic, Carnegie, Rosstown">
 		  <meta name="author" content="James Patrick">
 		  <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,9 +13,16 @@
 	  <meta name="viewport" content="width=device-width, initial-scale=1" />
 	  <link rel="stylesheet" href="assets/css/main.css" />
 	  <!-- <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" /> -->
-
+		
 	  <link rel="shortcut icon" href="images/h1_icon_1.ico" type="image/x-icon">
 	  <meta http-equiv="Cache-control" content="public" max-age=31536000>
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-TF35758');</script>
+		<!-- End Google Tag Manager -->
 	  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-159842209-1"></script>
 	  <script>
 		  window.dataLayer = window.dataLayer || [];
@@ -26,7 +33,10 @@
 	  </script>
 	  </head>
 	<body class="is-preload">
-
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TF35758"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
 		<div id="page-wrapper">
 
 			<!-- Contact and social header -->
@@ -36,7 +46,7 @@
 					<div class="container">
 						<a class="col-12 facebook-icon" target="_blank" href="https://www.facebook.com/rosstownmedicalclinic/" rel="noreferrer hidefocus="true"><p class="p-hide">Follow us on Facebook</p><i class="fab fa-facebook-square fa-2x"></i></a>
 								<div id="first-contact">
-									<div class="contact-text" style="margin-bottom: 21px">
+									<div class="contact-text">
 									<p> 73 Rosstown Rd, Carnegie VIC 3163 &nbsp | &nbsp  Open 6 Days &nbsp |
 										&nbsp  Call us &nbsp (03) 9571 2244 </p>
 									</div>
@@ -94,7 +104,7 @@
 									    <h1>Carnegie's longest running and most respected family practice</h1>
 									</div>
 									<div class='boxWrap col-3-large' id="hideDesktop">
-										<a href="tel:0395712244" class="textHide button-large">Book appointment now</a>
+										<a href="tel:0395712244" class="textHide button-large" id="cta-button">Book appointment now</a>
 									</div>
 								</div>
 							  </div>
@@ -160,23 +170,52 @@
 									<p>
 										Historically we have focused on providing the highest level service to all of our clients,
 										Dr. Andrew Patrick covers a range of medical services to suit your requirements and assist you
-										in maintaining or beginning your journey back to good health.
+										in maintaining or beginning your journey back to good health:
 									</p>
 
 									<div class='altServices'>
-									<p id="teleconf"><i class="fas fa-angle-double-right gThan-2"></i> Teleconference appointments are available now, for more details please call <a href="tel:0395712244"> <u>(03) 9571 2244</u> </a> to make a booking</p>
-									<p><i class="fas fa-angle-double-right gThan-2"></i> Face to face consultations are running as they have always been</p>
-									<p><i class="fas fa-angle-double-right gThan-2"></i> Allied health care plans (Eligibility criteria applies)</p>
-									<p><i class="fas fa-angle-double-right gThan-2"></i> Health assessments (Including commercial driving licences and employment/ pre-employment assessments)</p>
-									<p> Surgery procedures we offer: </p>
-										<ul>
-											<li><i class="fas fa-angle-right gThan-1"></i> Minor surgical procedures </li>
-											<li><i class="fas fa-angle-right gThan-1"></i> Mole/skin checks and removal </li>
-											<li><i class="fas fa-angle-right gThan-1"></i> Travel vaccines & advice </li>
-											<li><i class="fas fa-angle-right gThan-1"></i> Children’s health and immunisations </li>
-										</ul>
+										<p id="teleconf"><i class="fas fa-angle-double-right gThan-2"></i> Teleconference appointments are available now, for more details please call <a href="tel:0395712244"> <u>(03) 9571 2244</u> </a> to make a booking</p>
+										<p><i class="fas fa-angle-double-right gThan-2"></i> Face to face consultations are running as they have always been</p>
+										<p><i class="fas fa-angle-double-right gThan-2"></i> Allied health care plans (Eligibility criteria applies)</p>
+										<p><i class="fas fa-angle-double-right gThan-2"></i> Health assessments (Including commercial driving licences and employment/ pre-employment assessments)</p>
+										<p><i class="fas fa-angle-double-right gThan-2"></i>Children’s health and immunisations</p>
+										<p><i class="fas fa-angle-double-right gThan-2"></i>Travel vaccines & advice</p>
+										<p class="bold"> Surgery procedures we offer: </p>
+											<ul>
+												<li><i class="fas fa-angle-right gThan-1"></i> Minor surgical procedures </li>
+												<li><i class="fas fa-angle-right gThan-1"></i> Mole/skin checks and removal </li>
+											</ul>
  									</div>
 
+									<!-- Fee table -->
+									<h1>Our fee breakdown</h1>
+									<table class="fee-table">
+										<td>
+										</td>
+										<td class="bold">
+											Medicare card holder
+										</td>
+										<td class="bold">
+											Non-medicare card holder
+										</td>
+										<td class="bold">
+											Employment assessments
+										</td>
+										<tbody>
+											<td class="bold">
+												$$ Cost 
+											</td>
+											<td>
+												Free
+											</td>
+											<td>
+												$50
+											</td>
+											<td>
+												$75
+											</td>
+										</tbody>
+									</table>
 								</div>
 							</section>
 						</div>
@@ -357,23 +396,23 @@
 										</tr>
 										<a href="tel:0395712244"><tr>
 												<td><strong>Monday </strong></td>
-												<td> 9am - 6pm </td>
+												<td> 9am – 1pm, 2 – 6pm </td>
 										</tr></a>
 										<a href="tel:0395712244"></a><tr>
 												<td><strong>Tuesday </strong></td>
-												<td> 9am - 6pm </td>
+												<td> 9am – 1pm, 2 – 6pm </td>
 										</tr></a>
 										<tr>
 												<td><strong>Wednesday </strong></td>
-												<td> 9am - 6pm </td>
+												<td> 9am – 4pm </td>
 										</tr>
 										<tr>
 												<td><strong>Thursday </strong></td>
-												<td> 9am - 6pm </td>
+												<td> 9am – 1pm, 2 – 6pm </td>
 										</tr>
 										<tr>
 												<td><strong>Friday </strong></td>
-												<td> 9am - 6pm </td>
+												<td> 9am – 1pm, 2 – 6pm </td>
 										</tr>
 										<tr>
 												<td><strong>Saturday </strong></td>
