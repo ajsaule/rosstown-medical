@@ -1,3 +1,5 @@
+// Current
+
 ;(function ($) {
   var $window = $(window),
     $body = $('body'),
@@ -155,9 +157,52 @@
   // 			},
   // 			enter: function() {
 
-  // 				// Activate section.
-  // 					$(this).removeClass('inactive');
+  // Title Bar.
+  ;(function () {
+    var $this = $(this),
+      $image = $this.find('.image'),
+      $img = $image.find('img'),
+      x
 
-  // 			}
-  // 		});
+    // Assign image.
+    $image.css('background-image', 'url(' + $img.attr('src') + ')')
+
+    // Set background position.
+    if ((x = $img.data('position'))) $image.css('background-position', x)
+
+    // Hide <img>.
+    $img.hide()
+  })
+
+  // $(
+  //   '<div id="titleBar">' +
+  //     '<a href="#navPanel" class="toggle"></a>' +
+  //     '<span class="title">' +
+  //     $('#logo').html() +
+  //     '</span>' +
+  //     '</div>',
+  // ).appendTo($body)
+
+  $('.slide-1').css('background-image', 'url(./images/clinic_1.webp)')
+  $('.slide-2').css('background-image', 'url(./images/clinic_6.webp)')
+  $('.slide-3').css('background-image', 'url(./images/clinic_5.webp)')
+
+  $('#abc_frame').attr(
+    'src',
+    'https://www.youtube.com/embed/tU8TB6FsfyA?autoplay=1&controls=0',
+  )
+
+  // Panel.
+  $('<div id="navPanel">' + '<nav>' + $('#nav').navList() + '</nav>' + '</div>')
+    .appendTo($body)
+    .panel({
+      delay: 500,
+      hideOnClick: true,
+      hideOnSwipe: true,
+      resetScroll: true,
+      resetForms: true,
+      side: 'left',
+      target: $body,
+      visibleClass: 'navPanel-visible',
+    })
 })(jQuery)
