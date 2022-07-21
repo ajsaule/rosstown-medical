@@ -359,6 +359,13 @@ label {
   text-align: right;
 }
 
+@media (max-width: 633px) {
+  label {
+    text-align: left;
+    margin-top: 15px;
+  }
+}
+
 input {
   /* make sure text fields have same font settings. By default textarea have monospace font */
   font: 1em sans-serif;
