@@ -5,8 +5,8 @@ const handler = async (req, res) => {
   const {nameContents, emailContents, messageContents} = req.body
 
   const msg = {
-    to: 'andrejsaule8@gmail.com',
-    from: 'andrejsaule8@gmail.com',
+    to: 'info@carnegiemedical.com.au',
+    from: 'info@carnegiemedical.com.au',
     subject: 'Rosstown Medical Website Form',
     html: `
             Name: ${nameContents} <br>
@@ -31,8 +31,7 @@ const allowCors = fn => async (req, res) => {
     'Access-Control-Allow-Origin',
     'https://www.carnegiemedical.com.au/',
   )
-  // another common pattern
-  // res.setHeader('Access-Control-Allow-Origin', req.headers.origin);
+
   res.setHeader(
     'Access-Control-Allow-Methods',
     'GET,OPTIONS,PATCH,DELETE,POST,PUT',
