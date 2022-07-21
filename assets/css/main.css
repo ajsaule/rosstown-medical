@@ -3201,8 +3201,10 @@ a:hover {
   }
 }
 
-.button {
-  margin-left: 6rem;
+@media (min-width: 633px) {
+  .button {
+    margin-left: 6rem;
+  }
 }
 
 .p-hide {
