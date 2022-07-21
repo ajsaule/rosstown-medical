@@ -19,7 +19,6 @@ const handler = async (req, res) => {
       await sgMail.send(msg)
       res.status(204).end()
     } catch (err) {
-      console.log('err123', err)
       res.status(500)
     }
   }

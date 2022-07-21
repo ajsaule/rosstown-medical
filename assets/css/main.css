@@ -7,17 +7,87 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-html, body, div, span, applet, object,
-iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
-pre, a, abbr, acronym, address, big, cite,
-code, del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var, b,
-u, i, center, dl, dt, dd, ol, ul, li, fieldset,
-form, label, legend, table, caption, tbody,
-tfoot, thead, tr, th, td, article, aside,
-canvas, details, embed, figure, figcaption,
-footer, header, hgroup, menu, nav, output, ruby,
-section, summary, time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -26,23 +96,38 @@ section, summary, time, mark, audio, video {
   vertical-align: baseline;
 }
 
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-	display: block;}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
 
 body {
   line-height: 1;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
 
-	blockquote:before, blockquote:after, q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: '';
   content: none;
 }
@@ -66,7 +151,9 @@ input::-moz-focus-inner {
   padding: 0;
 }
 
-input, select, textarea {
+input,
+select,
+textarea {
   -moz-appearance: none;
   -webkit-appearance: none;
   -ms-appearance: none;
@@ -152,7 +239,9 @@ html {
   box-sizing: border-box;
 }
 
-	*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -2722,7 +2811,7 @@ a:hover {
     margin-left: 5px;
   }
 
-   .toggle:before {
+  .toggle:before {
     content: '';
     position: absolute;
     background: url('images/iconfinder_menu-alt_134216.svg');
@@ -2746,10 +2835,8 @@ a:hover {
     margin-left: 5px;
   }
 
-
   #titleBar .toggle:active:after {
     background: rgba(255, 255, 255, 0.05);
-    
   }
 
   /* Top of page mobile logo bard */
@@ -2810,14 +2897,12 @@ a:hover {
     border-bottom: 0;
   }
 
-
   body.navPanel-visible #page-wrapper {
     -moz-transform: translateX(275px);
     -webkit-transform: translateX(275px);
     -ms-transform: translateX(275px);
     transform: translateX(275px);
   }
-
 
   body.navPanel-visible #titleBar {
     -moz-transform: translateX(275px);
@@ -2844,7 +2929,7 @@ a:hover {
   }
 
   .container > h1 {
-    font-size: unset;
+    font-size: 30px;
   }
 
   .button-large {
@@ -2862,8 +2947,6 @@ a:hover {
     opacity: 0.5;
     margin-left: 5px;
   }
-
- 
 }
 
 /* Small */
@@ -2933,10 +3016,16 @@ a:hover {
   }
 }
 
+.container h1 {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
 @media screen and (max-width: 736px) {
   /* Hero banner */
 
   .container h1 {
+    font-size: 20px;
     margin-bottom: 20px;
   }
 
@@ -3075,7 +3164,6 @@ a:hover {
     background: linear-gradient(0deg, #a5ecfa 0%, #83b4cb 100%);
     border-radius: 4px;
     position: relative;
-    transition: 0.2s;
     display: inline-block;
     letter-spacing: 1px;
     height: 40px;
@@ -3098,7 +3186,6 @@ a:hover {
     border-radius: 4px;
     background: linear-gradient(0deg, #cff7ff 0%, #c3ecff 100%);
     position: relative;
-    transition: 1s background;
     display: inline-block;
     letter-spacing: 1px;
     height: 40px;

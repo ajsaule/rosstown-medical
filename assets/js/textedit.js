@@ -101,16 +101,16 @@ submitBtn.addEventListener('click', e => {
     formValid = false
   }
   if (formValid == true) {
-    submitBtn.className = 'submitting'
+    // submitBtn.className = 'submitting'
     submitBtn.disabled = true
-    spinner.style.display = 'block'
-    spinner.style.zIndex = 50
+    spinner.style.display = 'inline'
+    spinner.style.zIndex = 1000
     spinner.className = 'submittingSpinner'
 
     setTimeout(() => {
       emailForm.style.display = 'none'
       thankyouMsg.style.display = 'block'
-    }, 2000)
+    }, 1000)
 
     axios({
       url:
