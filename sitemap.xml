@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
+  <!-- <url>
     <loc>https://www.rosstownfamilymedical.com.au/</loc>
-  </url>  
+  </url>   -->
   <url>
     <loc>https://www.carnegiemedical.com.au/</loc>
   </url>
   <url>
     <loc>https://www.carnegiemedical.com.au/blog.html</loc>
   </url>
-  <url>
-    <loc>https://www.carnegiefamilymedical.com.au/</loc>
-  </url>
   <!-- <url>
+    <loc>https://www.carnegiefamilymedical.com.au/</loc>
+  </url> -->
+  <url>
     <loc>https://www.carnegiemedical.com.au/index.html</loc>
-  </url -->
+  </url
 </urlset>
