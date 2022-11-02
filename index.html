@@ -381,9 +381,9 @@
 				<input id="slide-dot-3" type="radio" name="slides">
 				<div class="slide slide-3"></div>
 				<div class="menu">
-					<label for="slide-dot-1"></label>
-					<label for="slide-dot-2"></label>
-					<label for="slide-dot-3"></label>
+					<label id="slide-dot-1" for="slide-dot-1"></label>
+					<label id="slide-dot-2" for="slide-dot-2"></label>
+					<label id="slide-dot-3" for="slide-dot-3"></label>
 				</div>
 			</div>
 
@@ -534,13 +534,12 @@
 												<em class="bold">After Hours</em> <br>
 												<a href="tel:(03) 9429 5677">(03) 9429 5677</a><br>
 											</div>
-											<!-- <div class="email col-3 col-6-medium">
+											<div class="email col-3 col-6-medium">
 												<h2>Email</h2>
 												<a href="mailto:info@carnegiemedical.com.au"><i class="fas fa-envelope fa-3x"></i><p class="p-hide">Tap to send an Email to us</p></a> 
 												<p> <a href="mailto:info@carnegiemedical.com.au">info@carnegiemedical.com.au</a> </p>
-											</div> -->
+											</div>
 										</div>
-										<!--- T0001 - Uncomment the below code and try to fix -->
 										<h1 id='thankYou' class="hideThankyou">
 											Thanks for your message. </br>
 											We will get in touch </br>
@@ -583,14 +582,12 @@
 				</div>
 
 		<!-- Title Bar -->
-		<!-- FE0002 - Do we need the below 4 lines? -->
 		<div id="titleBar">
 			<a href="#navPanel" class="title"></a>
 			</div>
 		</div>
 		<!-- Old Nav -->
 		<div id="titleBar">
-			<!-- FE0002 - Just uncomment below line and debug the hamburger menu to get it to work -->
 			<a href="#navPanel" class="toggle"></a>
 				<span class="title">
 					<img id="logo" src="./images/h1_Logo.jpg" style="width: 240px; height: 60px; margin-right: 20px;" alt="Carnegie doctor rosstown medical clinic main logo covid">
@@ -623,9 +620,10 @@
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
-			
 			<script defer src="assets/js/main.js"></script>
+			
 			<script src="assets/js/fadeitin.js"></script>
+			<script src="assets/js/autoSlide.js"></script>
 			<!-- google apis -->
 			
 			
